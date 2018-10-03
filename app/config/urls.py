@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from polls import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('') -> url(r'^$')에 해당
+    path('', views.index),
 ]
